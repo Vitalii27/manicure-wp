@@ -7,9 +7,7 @@
   &_link {
     @extend .header_link;
   }
-  &_text {
-    @extend .header_text;
-  }
+
   &_img {
     @extend .header_img;
   }
@@ -54,38 +52,41 @@
   }
 }
 
-
-  @media only screen and (max-width: $screen-sm-max) {
-    .footer {
-      &_container{
-        flex-direction: column;
-      }
-      &_copy {
-        margin-top: 1.5rem;
-      }
-      &_copy-text {
-        padding-top: 1.5rem;
-      }
-      &_social{
-        margin-top: 1.5rem;
-      }
-    }
-  }
-
 @media only screen and (max-width: $screen-sm-max) {
-  .footer{
-    &_text{
-      display: block;
+  .footer {
+    &_container {
+      flex-direction: column;
+    }
+    &_copy {
+      margin-top: 1.5rem;
+    }
+    &_copy-text {
+      padding-top: 1.5rem;
+    }
+    &_social {
+      margin-top: 1.5rem;
     }
   }
 }
+
+@media only screen and (max-width: $screen-sm-max) {
+  .footer {
+    &_link {
+      p {
+        display: block;
+      }
+
+    }
+  }
+}
+
 @media only screen and (max-width: 510px) {
-  .footer{
-    &_menu{
-      ul{
+  .footer {
+    &_menu {
+      ul {
         flex-direction: column;
       }
-      li{
+      li {
         margin-top: 1rem;
         padding-left: 0;
       }

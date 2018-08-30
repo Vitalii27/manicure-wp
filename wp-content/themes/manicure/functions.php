@@ -148,6 +148,16 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Enqueue.
+ */
+require get_template_directory() . '/inc/enqueue.php';
+
+/**
+ * Svg.
+ */
+require get_template_directory() . '/inc/add-svg.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

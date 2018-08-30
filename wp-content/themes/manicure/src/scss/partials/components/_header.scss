@@ -18,10 +18,7 @@
 
   }
 
-  &_text {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-  }
+
 
   &_img {
 
@@ -32,6 +29,10 @@
     display: flex;
     align-items: center;
     height: 100%;
+    p{
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
   }
   &_phone {
     display: flex;
@@ -89,8 +90,11 @@
         font-size: 1.4rem;
       }
     }
-    &_text {
-      display: none;
+    &_link {
+      p{
+        display: none;
+      }
+
 
     }
 
