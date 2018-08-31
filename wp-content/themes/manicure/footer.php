@@ -16,29 +16,44 @@
 <footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="footer_container">
-            <div class="footer_logo">
-                <a href="#hero" class="footer_link"> <img src="assets/images/icon/logo.png" alt="logo"
-                                                          class="footer_img">
-                    <p class="footer_text">Учебный центр<br>
-                        маникюра и педикюра</p>
-                </a>
-            </div>
+            <?php if (get_field('footer-logo')): ?>
+                <div class="footer_logo">
+                    <a href="#hero" class="footer_link"> <img src="<?php the_field('footer-logo') ?>" alt="logo"
+                                                              class="footer_img">
+                        <?php the_field('footer-logo-text') ?>
+                    </a>
+                </div>
+            <?php endif; ?>
             <div class="footer_copy">
                 <div class="footer_menu">
-                    <ul>
-                        <li><a href="#about">О нас</a></li>
-                        <li><a href="#program">Программа обучения</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
-                    </ul>
+                    <?php
+                    $args = array(
+                        'theme_location' => 'footer',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'menu_class' => '',
+                        'walker' => '',
+                        'container' => 'ul',
+
+                    );
+                    wp_nav_menu($args);
+
+                    ?>
                 </div>
-                <div class="footer_copy-text">Школа маникюра и педикюра в Москве © 2018 Все права защищены</div>
+                <?php if (get_field('footer-menu-text')): ?>
+                    <div class="footer_copy-text"><?php the_field('footer-menu-text') ?></div>
+                <?php endif; ?>
             </div>
-            <div class="footer_social">
-                <a href="#"><img src="assets/images/icon/vk.png" alt="vk "></a>
-                <a href="#"><img src="assets/images/icon/fb.png" alt="fb "></a>
-                <a href="#"><img src="assets/images/icon/inst.png" alt="instagram "></a>
-            </div>
+            <?php if (have_rows('footer-list')): ?>
+                <div class="footer_social">
+                    <?php while (have_rows('footer-list')):
+                        the_row(); ?>
+                        <a href="<?php the_sub_field('footer-link'); ?>"><img
+                                    src="<?php the_sub_field('footer-icon'); ?>" alt="icon"></a>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+
+
         </div>
 
     </div>

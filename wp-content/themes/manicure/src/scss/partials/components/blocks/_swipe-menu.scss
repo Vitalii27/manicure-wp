@@ -26,13 +26,13 @@ body.is-swipe-menu-shown {
             bottom: 0;
             left: 0;
             background: rgba($black, 0.25);
-            z-index: $swipe-menu-z-index - 1;
+            z-index: $swipe-menu-z-index + 3;
         }
     }
 }
 
 .menu-btn {
-    z-index: $swipe-menu-z-index + 2;
+    z-index: $swipe-menu-z-index + 6;
 }
 
 .swipe-menu {
@@ -166,7 +166,7 @@ body.is-swipe-menu-shown {
         transform: translateX($swipe-menu-width);
         transition: $swipe-menu-transition-out;
         background: $white;
-        z-index: $swipe-menu-z-index;
+        z-index: $swipe-menu-z-index + 6;
     }
     .swipe-menu__list {
         display: block;

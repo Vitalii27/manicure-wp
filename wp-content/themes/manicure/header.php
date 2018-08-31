@@ -45,7 +45,7 @@
                             <div><?php the_field('header_tel') ?></div>
                         <?php endif; ?>
                         <?php if (get_field('header_tel-text')): ?>
-                            <a href="#callback" class="header_call js-pop-up"><?php the_field('header_tel-text') ?></a>
+                            <a href="#sing-up" class="header_call js-pop-up"><?php the_field('header_tel-text') ?></a>
                         <?php endif; ?>
                     </div>
                 </div>

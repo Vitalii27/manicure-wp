@@ -97,6 +97,15 @@ var PopUpModule = (function($) {
 }(jQuery));
 
 jQuery(function($) {
+
+    var wpcf7Elm = document.getElementById( 'wpcf7-f161-o2' );
     PopUpModule.initInline(".js-pop-up");
+
+    if(wpcf7Elm){
+        wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+            $.magnificPopup.close();
+            alertSucsess.showAlert('<i class="fa fa-info-circle" aria-hidden="true"></i> Ваше сообщение отправлено');
+        }, false );
+    }
 
 }); // ready
