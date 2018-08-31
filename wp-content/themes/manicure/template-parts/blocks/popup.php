@@ -10,7 +10,7 @@
         <?php echo do_shortcode(get_field('popup-shortcode')) ?>
         <?php if (get_field('popup-link-text')): ?>
             <div class="pop-up_link">
-                <p><?php the_field('popup-link-text') ?><a href="<?php the_field('popup_link') ?>"><?php the_field('popup-link') ?></a></p>
+                <p><?php the_field('popup-link-text') ?><a target="_blank" href="<?php echo get_template_directory_uri() ?>/assets/pdf/privacy-policy.pdf"><?php the_field('popup-link') ?></a></p>
             </div>
         <?php endif; ?>
     </div>

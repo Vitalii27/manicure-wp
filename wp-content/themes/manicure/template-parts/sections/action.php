@@ -28,7 +28,7 @@
         <div class="action_bottom-text">
             <p> <?php the_field('action-bottom-text') ?>
                 <?php if (get_field('action-bottom-text-link')): ?>
-                    <a href="#" target="_blank"><?php the_field('action-bottom-text-link') ?></a>
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/pdf/privacy-policy.pdf" target="_blank"><?php the_field('action-bottom-text-link') ?></a>
                 <?php endif; ?>
             </p>
         </div>
